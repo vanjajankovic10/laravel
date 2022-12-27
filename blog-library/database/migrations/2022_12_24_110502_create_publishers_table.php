@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('publishers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('PIB');
+            $table->integer('PIB')->unique();
             $table->timestamps();
         });
     }
